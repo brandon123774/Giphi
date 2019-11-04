@@ -26,8 +26,7 @@ for (var i = 0; i < topics.length; i++) {
 
 }
 
-
-//create variables for the program
+//create variables for the program that link to Giphy website database
 var apiKey = 'h10JPz5uC89880QCKzXN1dGLBdYd0SuW';
 var queryURL = "https://api.giphy.com/v1/gifs/search?q=kittens&limit=10&api_key=wslWpWhssAgYDK6zVXacBDsacT47flr4";
 

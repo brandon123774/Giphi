@@ -3,6 +3,25 @@ $(document).ready(function () {
     //Array of the topic of cars
     var topics = ["Acura", "BMW", "Cheverolet", "Dodge", "Ford", "GMC", "Honda", "Jeep", "Hyundai", "Toyota", "Mercedes-Benz", "Mazda"];
 
+    //create a function for car buttons to appear on page
+    var carButtons = function () {
+        //create a loop for the car makes
+        $("#car-buttons").empty();
+        for (var i = 0; i < topics.length; i++) {
+            //create a variable and set it equal to a button div
+            var topicsBtn = $("<button>");
+            //set attributes so that the class of buttons links
+            // topicsBtn.attr("class", "letter-button letter letter-button-color");
+            topicsBtn.attr("search-bar", topics[i]);
+            topicsBtn.text(topics[i]);
+            //append the buttons to the DOM
+            $("#car-buttons").append(topicsBtn);
+
+        }
+    };
+    //call car buttons
+    carButtons();
+
     function displayCars() {
         var car = $(this).data("search");
         console.log(car);
@@ -43,7 +62,7 @@ $(document).ready(function () {
         topics.push(newCars);
         console.log(topics);
         $("#search-text").val('');
-    
+
     });
     //run the search 
     $(document).on("click", "#search-btn", displayCars);
@@ -65,23 +84,7 @@ function playGifs() {
 
 
 
-//create a function for car buttons to appear on page
-// var carButtons = function () {
-//     //create a loop for the car makes
-//     $("#car-buttons").empty();
-//     for (var i = 0; i < topics.length; i++) {
-//         //create a variable and set it equal to a button div
-//         var topicsBtn = $("<button>");
-//         //set attributes so that the class of buttons links
-//         // topicsBtn.attr("class", "letter-button letter letter-button-color");
-//         topicsBtn.attr("search-bar", topics[i]);
-//         topicsBtn.text(topics[i]);
-//         //append the buttons to the DOM
-//         $("#car-buttons").append(topicsBtn);
 
-//     }};
-//     //call car buttons
-// carButtons();
 
 //get the gifs
 // $("#search-btn").on("click", function () {

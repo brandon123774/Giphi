@@ -20,6 +20,7 @@ Project is created using the following:
 * Javascript
 * JQuery
 * JSON
+* Ajax
 
 # How to use
  Either search for a car maker or click on a preset link and gifs should populate on the webpage.
